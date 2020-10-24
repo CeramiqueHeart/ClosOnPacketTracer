@@ -80,7 +80,7 @@ interface Cellular1
 interface Vlan1
  no ip address
 !
-router bgp 65366
+router bgp 65494
  bgp log-neighbor-changes
  no synchronization
  timers bgp 3 9
