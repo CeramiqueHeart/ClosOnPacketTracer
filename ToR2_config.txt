@@ -1,0 +1,229 @@
+version 16.3.2
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname ToR2
+!
+!
+!
+!
+!
+!
+!
+no ip cef
+ip routing
+!
+no ipv6 cef
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ ip address 10.0.2.2 255.255.255.255
+!
+interface GigabitEthernet1/0/1
+ switchport mode access
+ switchport nonegotiate
+!
+interface GigabitEthernet1/0/2
+ switchport mode access
+ switchport nonegotiate
+!
+interface GigabitEthernet1/0/3
+ switchport mode access
+ switchport nonegotiate
+!
+interface GigabitEthernet1/0/4
+ switchport mode access
+ switchport nonegotiate
+!
+interface GigabitEthernet1/0/5
+ switchport mode access
+ switchport nonegotiate
+!
+interface GigabitEthernet1/0/6
+ switchport mode access
+ switchport nonegotiate
+!
+interface GigabitEthernet1/0/7
+ switchport mode access
+ switchport nonegotiate
+!
+interface GigabitEthernet1/0/8
+ switchport mode access
+ switchport nonegotiate
+!
+interface GigabitEthernet1/0/9
+ switchport mode access
+ switchport nonegotiate
+!
+interface GigabitEthernet1/0/10
+ switchport mode access
+ switchport nonegotiate
+!
+interface GigabitEthernet1/0/11
+!
+interface GigabitEthernet1/0/12
+!
+interface GigabitEthernet1/0/13
+!
+interface GigabitEthernet1/0/14
+!
+interface GigabitEthernet1/0/15
+!
+interface GigabitEthernet1/0/16
+!
+interface GigabitEthernet1/0/17
+!
+interface GigabitEthernet1/0/18
+!
+interface GigabitEthernet1/0/19
+!
+interface GigabitEthernet1/0/20
+!
+interface GigabitEthernet1/0/21
+ no switchport
+ ip address 10.4.1.6 255.255.255.252
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet1/0/22
+ no switchport
+ ip address 10.3.1.6 255.255.255.252
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet1/0/23
+ no switchport
+ ip address 10.2.1.6 255.255.255.252
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet1/0/24
+ no switchport
+ ip address 10.1.1.6 255.255.255.252
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet1/1/1
+!
+interface GigabitEthernet1/1/2
+!
+interface GigabitEthernet1/1/3
+!
+interface GigabitEthernet1/1/4
+!
+interface Vlan1
+ ip address 10.100.0.65 255.255.255.192
+!
+router bgp 65201
+ bgp log-neighbor-changes
+ no synchronization
+ timers bgp 3 9
+ neighbor 10.1.1.5 remote-as 65100
+ neighbor 10.2.1.5 remote-as 65101
+ neighbor 10.3.1.5 remote-as 65102
+ neighbor 10.4.1.5 remote-as 65103
+ neighbor 10.100.0.66 remote-as 65366
+ neighbor 10.100.0.67 remote-as 65367
+ neighbor 10.100.0.68 remote-as 65368
+ neighbor 10.100.0.69 remote-as 65369
+ neighbor 10.100.0.70 remote-as 65370
+ neighbor 10.100.0.71 remote-as 65371
+ neighbor 10.100.0.72 remote-as 65372
+ neighbor 10.100.0.73 remote-as 65373
+ neighbor 10.100.0.74 remote-as 65374
+ neighbor 10.100.0.75 remote-as 65375
+ neighbor 10.100.0.76 remote-as 65376
+ neighbor 10.100.0.77 remote-as 65377
+ neighbor 10.100.0.78 remote-as 65378
+ neighbor 10.100.0.79 remote-as 65379
+ neighbor 10.100.0.80 remote-as 65380
+ neighbor 10.100.0.81 remote-as 65381
+ neighbor 10.100.0.82 remote-as 65382
+ neighbor 10.100.0.83 remote-as 65383
+ neighbor 10.100.0.84 remote-as 65384
+ neighbor 10.100.0.85 remote-as 65385
+ neighbor 10.100.0.86 remote-as 65386
+ neighbor 10.100.0.87 remote-as 65387
+ neighbor 10.100.0.88 remote-as 65388
+ neighbor 10.100.0.89 remote-as 65389
+ neighbor 10.100.0.90 remote-as 65390
+ neighbor 10.100.0.91 remote-as 65391
+ neighbor 10.100.0.92 remote-as 65392
+ neighbor 10.100.0.93 remote-as 65393
+ neighbor 10.100.0.94 remote-as 65394
+ neighbor 10.100.0.95 remote-as 65395
+ neighbor 10.100.0.96 remote-as 65396
+ neighbor 10.100.0.97 remote-as 65397
+ neighbor 10.100.0.98 remote-as 65398
+ neighbor 10.100.0.99 remote-as 65399
+ neighbor 10.100.0.100 remote-as 65400
+ neighbor 10.100.0.101 remote-as 65401
+ neighbor 10.100.0.102 remote-as 65402
+ neighbor 10.100.0.103 remote-as 65403
+ neighbor 10.100.0.104 remote-as 65404
+ neighbor 10.100.0.105 remote-as 65405
+ neighbor 10.100.0.106 remote-as 65406
+ neighbor 10.100.0.107 remote-as 65407
+ neighbor 10.100.0.108 remote-as 65408
+ neighbor 10.100.0.109 remote-as 65409
+ neighbor 10.100.0.110 remote-as 65410
+ neighbor 10.100.0.111 remote-as 65411
+ neighbor 10.100.0.112 remote-as 65412
+ neighbor 10.100.0.113 remote-as 65413
+ neighbor 10.100.0.114 remote-as 65414
+ neighbor 10.100.0.115 remote-as 65415
+ neighbor 10.100.0.116 remote-as 65416
+ neighbor 10.100.0.117 remote-as 65417
+ neighbor 10.100.0.118 remote-as 65418
+ neighbor 10.100.0.119 remote-as 65419
+ neighbor 10.100.0.120 remote-as 65420
+ neighbor 10.100.0.121 remote-as 65421
+ neighbor 10.100.0.122 remote-as 65422
+ neighbor 10.100.0.123 remote-as 65423
+ neighbor 10.100.0.124 remote-as 65424
+ neighbor 10.100.0.125 remote-as 65425
+ neighbor 10.100.0.126 remote-as 65426
+ neighbor 10.100.0.127 remote-as 65427
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+!
+end
