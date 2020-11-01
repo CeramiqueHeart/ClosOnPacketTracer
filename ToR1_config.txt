@@ -40,57 +40,101 @@ interface Loopback0
  ip address 10.0.2.1 255.255.255.255
 !
 interface GigabitEthernet1/0/1
- switchport mode access
- switchport nonegotiate
+ no switchport
+ ip address 169.254.0.1 255.255.255.252
+ duplex auto
+ speed auto
 !
 interface GigabitEthernet1/0/2
- switchport mode access
- switchport nonegotiate
+ no switchport
+ ip address 169.254.0.5 255.255.255.252
+ duplex auto
+ speed auto
 !
 interface GigabitEthernet1/0/3
- switchport mode access
- switchport nonegotiate
+ no switchport
+ ip address 169.254.0.9 255.255.255.252
+ duplex auto
+ speed auto
 !
 interface GigabitEthernet1/0/4
- switchport mode access
- switchport nonegotiate
+ no switchport
+ ip address 169.254.0.13 255.255.255.252
+ duplex auto
+ speed auto
 !
 interface GigabitEthernet1/0/5
- switchport mode access
- switchport nonegotiate
+ no switchport
+ ip address 169.254.0.17 255.255.255.252
+ duplex auto
+ speed auto
 !
 interface GigabitEthernet1/0/6
- switchport mode access
- switchport nonegotiate
+ no switchport
+ ip address 169.254.0.21 255.255.255.252
+ duplex auto
+ speed auto
 !
 interface GigabitEthernet1/0/7
- switchport mode access
- switchport nonegotiate
+ no switchport
+ ip address 169.254.0.25 255.255.255.252
+ duplex auto
+ speed auto
 !
 interface GigabitEthernet1/0/8
- switchport mode access
- switchport nonegotiate
+ no switchport
+ ip address 169.254.0.29 255.255.255.252
+ duplex auto
+ speed auto
 !
 interface GigabitEthernet1/0/9
- switchport mode access
- switchport nonegotiate
+ no switchport
+ ip address 169.254.0.33 255.255.255.252
+ duplex auto
+ speed auto
 !
 interface GigabitEthernet1/0/10
- switchport mode access
- switchport nonegotiate
+ no switchport
+ ip address 169.254.0.37 255.255.255.252
+ duplex auto
+ speed auto
 !
 interface GigabitEthernet1/0/11
+ no switchport
+ ip address 169.254.0.41 255.255.255.252
+ duplex auto
+ speed auto
 !
 interface GigabitEthernet1/0/12
+ no switchport
+ ip address 169.254.0.45 255.255.255.252
+ duplex auto
+ speed auto
 !
 interface GigabitEthernet1/0/13
-!
+ no switchport
+ ip address 169.254.0.49 255.255.255.252
+ duplex auto
+ speed auto
+ !
 interface GigabitEthernet1/0/14
-!
+ no switchport
+ ip address 169.254.0.53 255.255.255.252
+ duplex auto
+ speed auto
+ !
 interface GigabitEthernet1/0/15
-!
+ no switchport
+ ip address 169.254.0.57 255.255.255.252
+ duplex auto
+ speed auto
+ !
 interface GigabitEthernet1/0/16
-!
+ no switchport
+ ip address 169.254.0.61 255.255.255.252
+ duplex auto
+ speed auto
+ !
 interface GigabitEthernet1/0/17
 !
 interface GigabitEthernet1/0/18
@@ -142,69 +186,23 @@ router bgp 65200
  neighbor 10.2.0.5 remote-as 65101
  neighbor 10.3.0.5 remote-as 65102
  neighbor 10.4.0.5 remote-as 65103
- neighbor 10.100.0.2 remote-as 65302
- neighbor 10.100.0.3 remote-as 65303
- neighbor 10.100.0.4 remote-as 65304
- neighbor 10.100.0.5 remote-as 65305
- neighbor 10.100.0.6 remote-as 65306
- neighbor 10.100.0.7 remote-as 65307
- neighbor 10.100.0.8 remote-as 65308
- neighbor 10.100.0.9 remote-as 65309
- neighbor 10.100.0.10 remote-as 65310
- neighbor 10.100.0.11 remote-as 65311
- neighbor 10.100.0.12 remote-as 65312
- neighbor 10.100.0.13 remote-as 65313
- neighbor 10.100.0.14 remote-as 65314
- neighbor 10.100.0.15 remote-as 65315
- neighbor 10.100.0.16 remote-as 65316
- neighbor 10.100.0.17 remote-as 65317
- neighbor 10.100.0.18 remote-as 65318
- neighbor 10.100.0.19 remote-as 65319
- neighbor 10.100.0.20 remote-as 65320
- neighbor 10.100.0.21 remote-as 65321
- neighbor 10.100.0.22 remote-as 65322
- neighbor 10.100.0.23 remote-as 65323
- neighbor 10.100.0.24 remote-as 65324
- neighbor 10.100.0.25 remote-as 65325
- neighbor 10.100.0.26 remote-as 65326
- neighbor 10.100.0.27 remote-as 65327
- neighbor 10.100.0.28 remote-as 65328
- neighbor 10.100.0.29 remote-as 65329
- neighbor 10.100.0.30 remote-as 65330
- neighbor 10.100.0.31 remote-as 65331
- neighbor 10.100.0.32 remote-as 65332
- neighbor 10.100.0.33 remote-as 65333
- neighbor 10.100.0.34 remote-as 65334
- neighbor 10.100.0.35 remote-as 65335
- neighbor 10.100.0.36 remote-as 65336
- neighbor 10.100.0.37 remote-as 65337
- neighbor 10.100.0.38 remote-as 65338
- neighbor 10.100.0.39 remote-as 65339
- neighbor 10.100.0.40 remote-as 65340
- neighbor 10.100.0.41 remote-as 65341
- neighbor 10.100.0.42 remote-as 65342
- neighbor 10.100.0.43 remote-as 65343
- neighbor 10.100.0.44 remote-as 65344
- neighbor 10.100.0.45 remote-as 65345
- neighbor 10.100.0.46 remote-as 65346
- neighbor 10.100.0.47 remote-as 65347
- neighbor 10.100.0.48 remote-as 65348
- neighbor 10.100.0.49 remote-as 65349
- neighbor 10.100.0.50 remote-as 65350
- neighbor 10.100.0.51 remote-as 65351
- neighbor 10.100.0.52 remote-as 65352
- neighbor 10.100.0.53 remote-as 65353
- neighbor 10.100.0.54 remote-as 65354
- neighbor 10.100.0.55 remote-as 65355
- neighbor 10.100.0.56 remote-as 65356
- neighbor 10.100.0.57 remote-as 65357
- neighbor 10.100.0.58 remote-as 65358
- neighbor 10.100.0.59 remote-as 65359
- neighbor 10.100.0.60 remote-as 65360
- neighbor 10.100.0.61 remote-as 65361
- neighbor 10.100.0.62 remote-as 65362
- neighbor 10.100.0.63 remote-as 65363
-!
+ neighbor 169.254.0.2 remote-as 65301
+ neighbor 169.254.0.6 remote-as 65302
+ neighbor 169.254.0.10 remote-as 65303
+ neighbor 169.254.0.14 remote-as 65304
+ neighbor 169.254.0.18 remote-as 65305
+ neighbor 169.254.0.22 remote-as 65306
+ neighbor 169.254.0.26 remote-as 65307
+ neighbor 169.254.0.30 remote-as 65308
+ neighbor 169.254.0.34 remote-as 65309
+ neighbor 169.254.0.38 remote-as 65310
+ neighbor 169.254.0.42 remote-as 65311
+ neighbor 169.254.0.46 remote-as 65312
+ neighbor 169.254.0.50 remote-as 65313
+ neighbor 169.254.0.54 remote-as 65314
+ neighbor 169.254.0.58 remote-as 65315
+ neighbor 169.254.0.62 remote-as 65316
+ !
 ip classless
 !
 ip flow-export version 9

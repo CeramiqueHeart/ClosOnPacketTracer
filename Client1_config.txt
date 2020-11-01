@@ -1,0 +1,20 @@
+enable
+configure t
+hostname Client1
+spanning-tree portfast default
+!
+interface Loopback0
+ ip address 192.168.1.1 255.255.255.255
+!
+interface GigabitEthernet0
+ ip address 169.254.0.2 255.255.255.252
+ no shutdown
+!
+router bgp 65301
+ bgp log-neighbor-changes
+ no synchronization
+ timers bgp 3 9
+ neighbor 169.254.0.1 remote-as 65200
+ network 192.168.1.1 mask 255.255.255.255
+!
+end
